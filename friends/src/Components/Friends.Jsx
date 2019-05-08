@@ -1,13 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Friend from './Friend'
 
-class Friends extends Component {
-    render() {
+
+
+const Friends = (props) => {
+    console.log(props)
         return (
-            <div>
+        <div>
+            {props.friends.map(friend=><Friend key={friend.id} friend={friend}/>
                 
-            </div>
-        );
-    }
-}
+                )}
+        </div>
+    );
+};
 
 export default Friends;
