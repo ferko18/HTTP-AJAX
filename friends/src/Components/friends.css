@@ -30,7 +30,9 @@
   /* border: solid red 1px; */
   margin-left: 25px;
   padding-left: 40px;
-  width: 60px;
+  width: 70px;
+  font-size: 1.2rem;
+  /* border: solid red 1px; */
 }
 
 .Editbtn

@@ -23,7 +23,7 @@ const Form = () => {
         <input type="email" />
       </div>
       
-      <div class="submitbtn">Submit</div>
+      <div class="submitbtn">Save</div>
       </div>
       
   </form>
