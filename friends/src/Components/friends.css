@@ -42,3 +42,20 @@
 }
 
 
+.Deletebtn
+ {
+  margin-left: 20px;
+  margin-right: 20px; background-color: red;
+  color: white;
+  width: 90px
+}
+
+.btnDiv{
+  /* border: solid red 1px; */
+  position: absolute;
+  right: 0
+}
+
+.Friend table{
+  position: relative;
+}
