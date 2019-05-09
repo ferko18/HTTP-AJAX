@@ -13,16 +13,23 @@ class Form extends React.Component {
 
   changeHandler = event => {
     event.persist();
-    console.log(event.target.value)
+    // console.log(event.target.value)
     this.setState(prevState => ({
       friend: { ...prevState.friend, [event.target.name]: event.target.value }
     }));
   };
 
+  handleSubmit = (event)=>{
+    event.preventDefault()
+    event.persist();
+    // console.log(event)
+    this.props.addFriend(event, this.state.friend)
+  }
+
   render() {
     return (
       <div>
-        <form className="contact">
+        <form onSubmit={this.handleSubmit} className="contact">
           <div className="outer">
             <div className="label-text">Id</div>
             <div className="input-text">
@@ -61,7 +68,7 @@ class Form extends React.Component {
               />
             </div>
 
-            <div className="submitbtn">Save</div>
+            <button className="submitbtn">Save</button>
           </div>
         </form>
       </div>
