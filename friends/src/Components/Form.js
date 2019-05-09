@@ -13,9 +13,9 @@ class Form extends React.Component {
 
   changeHandler = event => {
     event.persist();
-    // console.log(event.target.value)
+    console.log(event.target.value)
     this.setState(prevState => ({
-      friend: { ...prevState.friend, [event.target.name]: event.target.value }
+      friend: {  [event.target.name]: event.target.value }
     }));
   };
 

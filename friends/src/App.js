@@ -3,12 +3,7 @@ import axios from "axios";
 import "./App.css";
 import Friends from "./Components/Friends";
 import Form from "./Components/Form";
-import {
-  BrowserRouter as Router,
-  Route,
-  NavLink,
-  withRouter
-} from 'react-router-dom'
+
 
 class App extends Component {
   constructor(props) {
@@ -32,7 +27,7 @@ class App extends Component {
   addFriend = (e, friend) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3333/friends", friend)
+      .post("http://localhost:5000/friends", friend)
       .then(res => {
         this.setState({
           friends: res.data
@@ -46,7 +41,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Form  addFriend={this.state.addFriend}/>
+        <Form  addFriend={this.addFriend}/>
         <Friends friends={this.state.friends} />
       </div>
     );
