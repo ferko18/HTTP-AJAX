@@ -13,15 +13,16 @@ class Form extends React.Component {
 
   changeHandler = event => {
     event.persist();
-    console.log(event.target.value)
-    this.setState(prevState => ({
-      friend: {  [event.target.name]: event.target.value }
-    }));
+    // console.log(event.target.value)
+    this.setState({
+      friend: { ...this.state.friend, [event.target.name]: event.target.value }
+    });
   };
 
   handleSubmit = (event)=>{
+    console.log(this.state.friend)
     event.preventDefault()
-    event.persist();
+   
     // console.log(event)
     this.props.addFriend(event, this.state.friend)
   }
@@ -68,7 +69,7 @@ class Form extends React.Component {
               />
             </div>
 
-            <button className="submitbtn">Save</button>
+            <button type="submit" className="submitbtn">Save</button>
           </div>
         </form>
       </div>
