@@ -17,7 +17,7 @@ class App extends Component {
     axios
       .get("http://localhost:5000/friends")
       .then(res => {
-        this.setState({ friends: res.data }); console.log(res)
+        this.setState({ friends: res.data });
         
       })
       .catch(err => {

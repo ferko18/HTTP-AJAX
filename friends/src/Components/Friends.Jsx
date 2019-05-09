@@ -3,7 +3,7 @@ import Friend from "./Friend";
 import "./friends.css";
 
 const Friends = props => {
-  console.log(props)
+  
   return (
     <div className="Friends">
       <table>

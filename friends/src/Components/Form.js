@@ -10,6 +10,15 @@ class Form extends React.Component {
       email: ""
     }
   };
+
+  changeHandler = event => {
+    event.persist();
+    console.log(event.target.value)
+    this.setState(prevState => ({
+      friend: { ...prevState.friend, [event.target.name]: event.target.value }
+    }));
+  };
+
   render() {
     return (
       <div>
@@ -17,19 +26,39 @@ class Form extends React.Component {
           <div className="outer">
             <div className="label-text">Id</div>
             <div className="input-text">
-              <input type="text" name="id" onChange={this.changeHandler} value={this.state.friend.id} />
+              <input
+                type="text"
+                name="id"
+                onChange={this.changeHandler}
+                value={this.state.friend.id}
+              />
             </div>
             <div className="label-text">Name</div>
             <div className="input-text">
-              <input type="text" name="name" onChange={this.changeHandler} value ={this.state.friend.name}/>
+              <input
+                type="text"
+                name="name"
+                onChange={this.changeHandler}
+                value={this.state.friend.name}
+              />
             </div>
             <div className="label-text">Age</div>
             <div className="input-text">
-              <input type="text" name="age" onChange={this.changeHandler} value ={this.state.friend.age}/>
+              <input
+                type="text"
+                name="age"
+                onChange={this.changeHandler}
+                value={this.state.friend.age}
+              />
             </div>
             <div className="label-text">Email Address</div>
             <div className="input-text">
-              <input type="email" name="email" onChange={this.changeHandler} value ={this.state.friend.email} />
+              <input
+                type="email"
+                name="email"
+                onChange={this.changeHandler}
+                value={this.state.friend.email}
+              />
             </div>
 
             <div className="submitbtn">Save</div>
